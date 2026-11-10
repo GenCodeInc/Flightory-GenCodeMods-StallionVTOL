@@ -4,7 +4,12 @@ Motor-mount modification and wingtip LED scripts for the Flightory Stallion VTOL
 
 ## Motor Mount
 
-Modified front motor mount for the SPARKHOBBY / KINGMAX KM1203MD mini digital servo.
+Modified front motor mount for the SPARKHOBBY / KINGMAX KM1203MD mini digital
+servo. The mount accommodates the larger metal servo horn/arm, with changes
+specifically supporting the Kingmax 1203MD metal-arm option linked from the
+product site.
+
+![Modified motor mount with Kingmax metal arm](images/motor-mount-metal-horn.png)
 
 | File | Contents |
 | --- | --- |

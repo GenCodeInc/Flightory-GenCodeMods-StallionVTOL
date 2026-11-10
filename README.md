@@ -45,6 +45,16 @@ Related files:
 | `Stallion cradle 1-2.stl` | First half of the split Stallion cradle |
 | `Stallion cradle 2-2.stl` | Second half of the split Stallion cradle |
 
+## Stallion GPS Holder
+
+GPS holder for the Matek Systems M10Q-5883 GPS & Compass Module.
+
+Related files:
+
+| File | Contents |
+| --- | --- |
+| `StallionGPS.stl` | Printable GPS holder |
+
 ## Wingtip LED Scripts
 
 Two SpeedyBee WS2812 boards, four LEDs per wing, controlled by a TBS Lucid H7 Wing running ArduPilot Lua through S13. No separate LED controller is used.

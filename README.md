@@ -60,6 +60,22 @@ Related files:
 | --- | --- |
 | `StallionGPS.stl` | Printable GPS holder |
 
+## Lucid Wing FC/PDB Holder
+
+FC/PDB holder and cover for the TBS Lucid Wing and a 30x30 PDB.
+
+<p>
+  <img src="images/lucid-wing-fc-pdb-holder.png" alt="FC/PDB holder for the Lucid Wing" width="49%">
+  <img src="images/lucid-wing-pdb-cover.png" alt="Cover for the 30x30 PDB" width="49%">
+</p>
+
+Related files:
+
+| File | Contents |
+| --- | --- |
+| `FCHolder.stl` | Printable FC/PDB holder |
+| `PDBCover.3mf` | 3MF PDB cover model |
+
 ## Wingtip LED Scripts
 
 Two SpeedyBee WS2812 boards, four LEDs per wing, controlled by a TBS Lucid H7 Wing running ArduPilot Lua through S13. No separate LED controller is used.

@@ -11,18 +11,82 @@ Modified front motor mount for the SPARKHOBBY / KINGMAX KM1203MD mini digital se
 | `MOTOR MOUNT FRONT-LARGER-HORN-METAL.f3d` | Editable Fusion 360 design |
 | `MOTOR MOUNT FRONT-LARGER-HORN-METAL.stl` | Printable mesh |
 
+## 3D-Printed Mods
+
+| File | Contents |
+| --- | --- |
+| `Stallion cradle 1-2.stl` | First half of the split Stallion cradle |
+| `Stallion cradle 2-2.stl` | Second half of the split Stallion cradle |
+| `NOSE-O4-AIR-PRO.stl` | Modified nose cone for the O4 Air Pro |
+| `NOSE-O4-AIR-PRO-COVER.stl` | Modified cover for the O4 Air Pro nose cone |
+
+The Stallion cradle is Robert Triggs' design; full credit for the cradle goes to
+Robert. The only change here was splitting it into two parts so it can be
+printed without supports. It is useful as a work stand, a takeoff pad, and for
+helping calibrate the accelerometer.
+
+The O4 Air Pro nose cone and cover are modifications by Ed Scott / GenCode.
+
 ## Wingtip LED Scripts
 
 Two SpeedyBee WS2812 boards, four LEDs per wing, controlled by a TBS Lucid H7 Wing running ArduPilot Lua through S13. No separate LED controller is used.
 
 ### stallion_led_nav.lua
 
-- Left wing red; right wing green.
-- All four LEDs on each wing show their navigation colour between flashes.
-- Rear two LEDs per wing flash white twice; front two remain red/green.
+- Left wing red; right wing green. All four LEDs on each wing show their
+  navigation colour between flashes.
+- Rear two LEDs per wing double-flash white; front two remain red/green.
 - Full-brightness navigation colours and white strobes.
-- Timing: 60 ms flash, 80 ms gap, 60 ms flash, 900 ms pause.
-- Strobes run while disarmed by default.
+- Normal navigation lights and white double strobe show only when READY TO ARM
+  or ARMED. While disarmed and not ready to arm, navigation lights are off and
+  all eight pixels show the pre-arm status:
+  - No GPS 3D fix and EKF not ready: red for 1 s, amber for 1 s, alternating.
+  - No GPS 3D fix only: red 1 s on, 1 s off.
+  - EKF not ready only: amber 1 s on, 1 s off.
+  - GPS and EKF OK, but another pre-arm check failing (for example, no radio):
+    fast amber blink, 250 ms on/off. See `PreArm:` in the GCS Messages.
+- Strobe timing: 60 ms flash, 80 ms gap, 60 ms flash, 900 ms pause.
+
+#### How Status Is Decided
+
+- GPS OK means the primary GPS has a 3D fix or better.
+- EKF OK means `ahrs:healthy()`.
+- Ready means `arming:pre_arm_checks()` passes.
+- While disarmed, GPS/EKF/pre-arm are checked every 1 s; armed is checked
+  every loop.
+
+#### User Settings
+
+| Setting | Value | Purpose |
+| --- | --- | --- |
+| `RED` | `{255,0,0}` | GPS status |
+| `AMBER` | `{255,100,0}` | EKF and other pre-arm status |
+| `OFF` | `{0,0,0}` | Status blink off phase |
+| `STATUS_HALF_MS` | `1000` | Status blink, 1 s on/off |
+| `OTHER_HALF_MS` | `250` | Fast blink for other pre-arm failures |
+| `STATUS_CHECK_MS` | `1000` | Status re-check interval while disarmed |
+
+#### GCS Messages
+
+- Startup: `STALLION LED: status lights v2 started`
+- On each state change, `STALLION LED: ` followed by one of:
+  - `no GPS fix + EKF not ready (red/amber)`
+  - `no GPS fix (red blink)`
+  - `EKF not ready (amber blink)`
+  - `other pre-arm check failing (fast amber)`
+  - `ready to arm (nav lights)`
+  - `armed (nav lights)`
+
+#### Compatibility
+
+Flown on ArduPlane 4.6.3 (TBS Lucid H7 Wing). Every Lua function used exists
+in ArduPlane 4.7.2 (checked against the 4.7.2 scripting docs). Not yet flown
+on 4.7.
+
+#### Changelog
+
+- v2: Added the GPS/EKF/pre-arm status light patterns while disarmed; nav
+  lights now show only when ready to arm or armed.
 
 ### stallion_led_demo.lua
 

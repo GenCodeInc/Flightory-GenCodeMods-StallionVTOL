@@ -49,6 +49,11 @@ Related files:
 
 GPS holder for the Matek Systems M10Q-5883 GPS & Compass Module.
 
+<p>
+  <img src="images/stallion-gps-holder-1.jpg" alt="Matek M10Q-5883 GPS module in the Stallion GPS holder" width="49%">
+  <img src="images/stallion-gps-holder-2.jpg" alt="Stallion GPS holder installed in the aircraft" width="49%">
+</p>
+
 Related files:
 
 | File | Contents |

@@ -13,24 +13,28 @@ Modified front motor mount for the SPARKHOBBY / KINGMAX KM1203MD mini digital se
 
 ## O4 Air Pro Nose Cone Mods
 
+I modified the O4 Air Pro nose cone and its matching cover.
+
+Related files:
+
 | File | Contents |
 | --- | --- |
 | `NOSE-O4-AIR-PRO.stl` | Modified nose cone for the O4 Air Pro |
 | `NOSE-O4-AIR-PRO-COVER.stl` | Modified cover for the O4 Air Pro nose cone |
 
-These nose cone and cover modifications were made by Ed Scott / GenCode.
-
 ## Stallion Cradle
+
+The Stallion cradle was designed by Robert Triggs; full credit for the original
+design goes to Robert. I split it into two parts so it can be printed without
+supports. It is useful as a work stand, takeoff pad, and aid for calibrating
+the accelerometer.
+
+Related files:
 
 | File | Contents |
 | --- | --- |
 | `Stallion cradle 1-2.stl` | First half of the split Stallion cradle |
 | `Stallion cradle 2-2.stl` | Second half of the split Stallion cradle |
-
-The Stallion cradle is Robert Triggs' design; full credit for the cradle goes to
-Robert. The only change here was splitting it into two parts so it can be
-printed without supports. It is useful as a work stand, a takeoff pad, and for
-helping calibrate the accelerometer.
 
 ## Wingtip LED Scripts
 

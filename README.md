@@ -15,6 +15,8 @@ Modified front motor mount for the SPARKHOBBY / KINGMAX KM1203MD mini digital se
 
 I modified the O4 Air Pro nose cone and its matching cover.
 
+![O4 Air Pro nose cone and cover installed](images/o4-air-pro-nose-cone.png)
+
 Related files:
 
 | File | Contents |
@@ -29,6 +31,8 @@ design goes to Robert. I split it into two parts so it can be printed without
 supports. It is useful as a work stand, takeoff pad, and aid for calibrating
 the accelerometer.
 
+![Stallion cradle parts](images/stallion-cradle.png)
+
 Related files:
 
 | File | Contents |
@@ -39,6 +43,8 @@ Related files:
 ## Wingtip LED Scripts
 
 Two SpeedyBee WS2812 boards, four LEDs per wing, controlled by a TBS Lucid H7 Wing running ArduPilot Lua through S13. No separate LED controller is used.
+
+![Stallion wingtip LED lights](images/stallion-led-lights.png)
 
 ### stallion_led_nav.lua
 

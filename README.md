@@ -11,21 +11,26 @@ Modified front motor mount for the SPARKHOBBY / KINGMAX KM1203MD mini digital se
 | `MOTOR MOUNT FRONT-LARGER-HORN-METAL.f3d` | Editable Fusion 360 design |
 | `MOTOR MOUNT FRONT-LARGER-HORN-METAL.stl` | Printable mesh |
 
-## 3D-Printed Mods
+## O4 Air Pro Nose Cone Mods
+
+| File | Contents |
+| --- | --- |
+| `NOSE-O4-AIR-PRO.stl` | Modified nose cone for the O4 Air Pro |
+| `NOSE-O4-AIR-PRO-COVER.stl` | Modified cover for the O4 Air Pro nose cone |
+
+These nose cone and cover modifications were made by Ed Scott / GenCode.
+
+## Stallion Cradle
 
 | File | Contents |
 | --- | --- |
 | `Stallion cradle 1-2.stl` | First half of the split Stallion cradle |
 | `Stallion cradle 2-2.stl` | Second half of the split Stallion cradle |
-| `NOSE-O4-AIR-PRO.stl` | Modified nose cone for the O4 Air Pro |
-| `NOSE-O4-AIR-PRO-COVER.stl` | Modified cover for the O4 Air Pro nose cone |
 
 The Stallion cradle is Robert Triggs' design; full credit for the cradle goes to
 Robert. The only change here was splitting it into two parts so it can be
 printed without supports. It is useful as a work stand, a takeoff pad, and for
 helping calibrate the accelerometer.
-
-The O4 Air Pro nose cone and cover are modifications by Ed Scott / GenCode.
 
 ## Wingtip LED Scripts
 
